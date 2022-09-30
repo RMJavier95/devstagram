@@ -22,11 +22,9 @@
                         name="name"
                         type="text"
                         placeholder="Tu nombre"
-                        class="border p-3 w-full rounded-lg @error('name') border-red-500
-                            
-                        @enderror"
+                        class="border p-3 w-full rounded-lg @error('name') border-red-500 @enderror"
                         value={{ old('name') }}
-                    />
+                    >
                     @error('name')
                         <p class="text-red-500 my-2 rounded-lg text-sm p-2 text-left font-bold">{{ $message }}</p>
                     @enderror
@@ -40,8 +38,9 @@
                         name="user"
                         type="text"
                         placeholder="Tu usuario"
-                        class="border p-3 w-full rounded-lg"
-                    />
+                        class="border p-3 w-full rounded-lg @error('user') border-red-500 @enderror"
+                        value={{ old('user') }}
+                    >
                     @error('user')
                         <p class="text-red-500 my-2 rounded-lg text-sm p-2 text-left font-bold">{{ $message }}</p>
                     @enderror
@@ -55,8 +54,9 @@
                         name="email"
                         type="email"
                         placeholder="Tu email"
-                        class="border p-3 w-full rounded-lg"
-                    />
+                        class="border p-3 w-full rounded-lg @error('email') border-red-500 @enderror"
+                        value={{ old('email') }}
+                    >
                     @error('email')
                         <p class="text-red-500 my-2 rounded-lg text-sm p-2 text-left font-bold">{{ $message }}</p>
                     @enderror
@@ -70,8 +70,9 @@
                         name="password"
                         type="password"
                         placeholder="Tu contraseña"
-                        class="border p-3 w-full rounded-lg"
-                    />
+                        class="border p-3 w-full rounded-lg @error('password') border-red-500 @enderror"
+                        
+                    >
                     @error('password')
                         <p class="text-red-500 my-2 rounded-lg text-sm p-2 text-left font-bold">{{ $message }}</p>
                     @enderror
@@ -86,7 +87,7 @@
                         type="password"
                         placeholder="Repite contraseña"
                         class="border p-3 w-full rounded-lg"
-                    />
+                    >
                     @error('password')
                         <p class="text-red-500 my-2 rounded-lg text-sm p-2 text-left font-bold">{{ $message }}</p>
                     @enderror
@@ -95,7 +96,7 @@
                     type="submit"
                     value="Crear cuenta"
                     class="bg-red-800 hover:bg-red-900 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg"
-                />
+                >
             </form>
         </div>
 
